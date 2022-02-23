@@ -34,7 +34,7 @@ with dataset:
     st.text("This section will contain all the data used to create the model. The datset source is : url")
     
     st.subheader("Pick-up location ID distribution.")
-    taxi_data= get_data("/Users/massivaroudjane/Desktop/Decision tree streamlit app/Data/data.csv")
+    taxi_data= get_data("Data/data.csv")
     st.write(taxi_data.head())
     pulocation_dist= taxi_data['PULocationID'].value_counts().head(50)
     st.bar_chart(pulocation_dist)
